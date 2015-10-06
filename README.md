@@ -6,6 +6,8 @@ Typing ``` grunt ``` will concatenate, uglify and compile with an expanded outpu
 
 Typing ``` grunt build ``` will concatenate, uglify and compile with a compressed output for final production deployment.
 
+Type ``` grunt watch ``` to watch all files for changes and run development task on file change.
+
 * [grunt-contrib-uglify]
 * [grunt-contrib-watch]
 * [grunt-sass]
