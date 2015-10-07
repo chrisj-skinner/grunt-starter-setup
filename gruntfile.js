@@ -7,9 +7,8 @@ module.exports = function(grunt){
 		// setup uglify task
 		uglify: {
 			build: {
-				files: {
-					'js/scripts.min.js': ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'src/js/*.js']
-				},
+				src: 'src/js/*.js',
+				dest: 'js/scripts.min.js'
 			},
 			dev: {
 				options: {
@@ -18,20 +17,19 @@ module.exports = function(grunt){
 					compress: false,
 					preserveComments: 'all'
 				},
-				files: {
-					'js/scripts.min.js': ['bower_components/jquery/dist/jquery.js', 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js', 'src/js/*.js']
-				},
+				src: 'src/js/*.js',
+				dest: 'js/scripts.min.js'
 			},
 		},
 
 		// setup watch task
 		watch: {
 			js: {
-				files: ['bower_components/**/*.js', 'src/js/*.js'],
+				files: ['src/js/*.js'],
 				tasks: ['uglify:dev']
 			},
 			css: {
-				files: ['src/scss/**/*.scss'],
+				files: ['src/sass/**/*.scss'],
 				tasks: ['sass:dev']
 			},
 		},
@@ -43,7 +41,7 @@ module.exports = function(grunt){
 					outputStyle: 'expanded'
 				},
 				files: {
-					'css/styles.min.css' : 'src/scss/styles.scss'
+					'css/styles.min.css' : 'src/sass/styles.scss'
 				},
 			},
 			build: {
@@ -51,7 +49,7 @@ module.exports = function(grunt){
 					outputStyle: 'compressed'
 				},
 				files: {
-					'css/styles.min.css' : 'src/scss/styles.scss'
+					'css/styles.min.css' : 'src/sass/styles.scss'
 				},
 			},
 		},
@@ -63,6 +61,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-sass');
 
 	// Register task(s)
-	grunt.registerTask('default', ['uglify:dev','sass:dev']);
+	grunt.registerTask('default', ['sass:dev']);
 	grunt.registerTask('build', ['uglify:build', 'sass:build']);
 };

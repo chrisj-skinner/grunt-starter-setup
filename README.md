@@ -1,7 +1,20 @@
-#Grunt | Bower | Bootstrap Sass Started Setup
+#Grunt Setup
 
-A simple clean grunt setup with bower and ``` boostrap-sass ```.
+A simple clean grunt setup with both a development ```grunt ``` and build / deployment ``` grunt build ``` command.
 
-Developed from [grunt-starter-setup]
+Typing ``` grunt ``` will concatenate, uglify and compile with an expanded output for easy debugging.
 
-[grunt-starter-setup]: <https://github.com/chrisj-skinner/grunt-starter-setup>
+Typing ``` grunt build ``` will concatenate, uglify and compile with a compressed output for final production deployment.
+
+Type ``` grunt watch ``` to watch all files for changes and run development task on file change.
+
+* [grunt-contrib-uglify]
+* [grunt-contrib-watch]
+* [grunt-sass]
+
+
+[grunt-contrib-uglify]: <https://www.npmjs.com/package/grunt-contrib-uglify>
+
+[grunt-contrib-watch]: <https://www.npmjs.com/package/grunt-contrib-watch>
+
+[grunt-sass]: <https://www.npmjs.com/package/grunt-sass>

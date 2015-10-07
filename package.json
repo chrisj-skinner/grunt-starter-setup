@@ -1,12 +1,12 @@
 {
-  "name": "grunt-bower-bootstrap-sass-setup",
+  "name": "first_project",
   "version": "0.0.1",
-  "description": "Grunt | Bower | Bootstrap Sass Starter Setup",
+  "description": "grunt demo",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Chris Skinner <chrisskinner.co>",
+  "author": "Chris Skinner",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",
