@@ -1,1 +1,9 @@
-.title{font-size:44px}code{background-color:lightgrey;padding:4px;border-radius:5px}
+.title {
+  font-size: 44px;
+}
+
+code {
+  background-color: lightgrey;
+  padding: 4px;
+  border-radius: 5px;
+}
