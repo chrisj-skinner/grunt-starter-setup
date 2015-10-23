@@ -1,15 +1,13 @@
 module.exports = function(grunt){
 
+	// var mozjpeg = require('imagemin-mozjpeg');
+
 	// Configure task(s)
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
 		// setup uglify task
 		uglify: {
-			build: {
-				src: 'src/js/*.js',
-				dest: 'js/scripts.min.js'
-			},
 			dev: {
 				options: {
 					beautify: true,
@@ -17,9 +15,14 @@ module.exports = function(grunt){
 					compress: false,
 					preserveComments: 'all'
 				},
-				src: 'src/js/*.js',
-				dest: 'js/scripts.min.js'
+				src: 'src/js/*.js',			// Src path
+				dest: 'js/scripts.min.js'	// Destination path
 			},
+			build: {
+				src: 'src/js/*.js',			// Src path
+				dest: 'js/scripts.min.js' 	// Destination path
+			},
+			
 		},
 
 		// setup watch task
@@ -42,6 +45,7 @@ module.exports = function(grunt){
 				},
 				files: {
 					'css/styles.min.css' : 'src/sass/styles.scss'
+					// Destination path followed by Src Path
 				},
 			},
 			build: {
@@ -50,7 +54,21 @@ module.exports = function(grunt){
 				},
 				files: {
 					'css/styles.min.css' : 'src/sass/styles.scss'
+					// Destination path followed by Src Path
 				},
+			},
+		},
+
+		// setup imagemin
+		imagemin: {
+			build: {
+
+				files: [{
+					expand: true,				// Enable dynamic expansion
+					cwd: 'src/',				// Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif}'],// Patterns to match
+					dest: ''					// Destination path
+				}]
 			},
 		},
 	});
@@ -59,8 +77,9 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	// Register task(s)
 	grunt.registerTask('default', ['sass:dev']);
-	grunt.registerTask('build', ['uglify:build', 'sass:build']);
+	grunt.registerTask('build', ['uglify:build', 'sass:build', 'imagemin:build']);
 };
