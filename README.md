@@ -8,7 +8,7 @@ Typing ``` grunt build ``` will concatenate, uglify and compile with a compresse
 
 Type ``` grunt watch ``` to watch all files for changes and run development task on file change.
 
-Type ``` grunt imagemin ``` or running ```grunt build ``` to reduce image size.
+Type ``` grunt imagemin ``` to reduce image size. Also added to ``` grunt build ```.
 
 
 * [grunt-contrib-uglify]
