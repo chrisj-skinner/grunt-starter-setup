@@ -8,9 +8,13 @@ Typing ``` grunt build ``` will concatenate, uglify and compile with a compresse
 
 Type ``` grunt watch ``` to watch all files for changes and run development task on file change.
 
+Type ``` grunt imagemin ``` or running ```grunt build ``` to reduce image size.
+
+
 * [grunt-contrib-uglify]
 * [grunt-contrib-watch]
 * [grunt-sass]
+* [grunt-contrib-imagemin]
 
 
 [grunt-contrib-uglify]: <https://www.npmjs.com/package/grunt-contrib-uglify>
@@ -18,3 +22,5 @@ Type ``` grunt watch ``` to watch all files for changes and run development task
 [grunt-contrib-watch]: <https://www.npmjs.com/package/grunt-contrib-watch>
 
 [grunt-sass]: <https://www.npmjs.com/package/grunt-sass>
+
+[grunt-contrib-imagemin]: <https://www.npmjs.com/package/grunt-contrib-imagemin>
