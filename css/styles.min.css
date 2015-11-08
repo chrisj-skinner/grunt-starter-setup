@@ -7,3 +7,7 @@ code {
   padding: 4px;
   border-radius: 5px;
 }
+
+figcaption {
+  font-size: 10px;
+}
