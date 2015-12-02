@@ -4,7 +4,7 @@ A simple clean grunt setup with both a development ```grunt ``` and build / depl
 
 Typing ``` grunt ``` will concatenate, uglify and compile with an expanded output for easy debugging.
 
-Typing ``` grunt build ``` will concatenate, uglify and compile with a compressed output for final production deployment.
+Typing ``` grunt build ``` will concatenate, uglify, reduce image size and compile with a compressed output for final production deployment.
 
 Type ``` grunt watch ``` to watch all files for changes and run development task on file change.
 
