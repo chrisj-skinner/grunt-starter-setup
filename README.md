@@ -1,4 +1,4 @@
-#Grunt Setup
+#Grunt Starter Setup
 
 A simple clean grunt setup with both a development ```grunt ``` and build / deployment ``` grunt build ``` command.
 
@@ -10,6 +10,13 @@ Type ``` grunt watch ``` to watch all files for changes and run development task
 
 Type ``` grunt imagemin ``` to reduce image size. Also added to ``` grunt build ```.
 
+
+### Version
+0.0.1
+
+### Tech
+
+Grunt Starter Setup uses a number of open source projects to work properly:
 
 * [grunt-contrib-uglify]
 * [grunt-contrib-watch]
@@ -24,3 +31,19 @@ Type ``` grunt imagemin ``` to reduce image size. Also added to ``` grunt build 
 [grunt-sass]: <https://www.npmjs.com/package/grunt-sass>
 
 [grunt-contrib-imagemin]: <https://www.npmjs.com/package/grunt-contrib-imagemin>
+
+
+### Installation
+
+A packages.json file is included.
+
+Run the following command in the root directory of the app to install the required node modules:
+
+```sh
+$ npm install
+```
+
+License
+----
+
+MIT
